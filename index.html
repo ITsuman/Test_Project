@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="service.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body style="margin: 0px;">
+    <div class="container">
+        <div style="height: 50px;" class="header">
+            <nav style="display: inline-flex;
+                        list-style: none;
+                        padding: 10px;">
+                <li style="padding: 5px;">
+                    <button style="border: none;
+                    background-color: white;">
+                        <i class="fa fa-bars"></i> 
+                    </button>
+                </li>
+                <li style="padding: 5px;">Home</li>
+                <li style="padding: 5px;">Shop</li>
+                <li style="padding: 5px;">Magazine</li>
+            </nav>
+            <nav style="float: right;display: inline-flex;
+                    list-style: none;
+                    padding: 10px;">
+                <li style="padding: 5px;">
+                    <label><i class="fa fa-search"></i></label>
+                    <input type="text" class="search" placeholder="Living Room / Bedroom" id="item_type">
+                </li>
+                <li style="padding: 5px;">Login</li>
+            </nav>
+        </div>
+        <div  class="main-content">
+            <div style=" width: 250px;">
+                <div class="accordion" id="collection">
+                    Collection
+                    <span style="float: right;">
+                        <i class='fas fa-angle-down'></i>
+                    </span>
+                </div>
+                    <div class="panel" id="panel1">
+                        <div class="list-collection-item">
+                        </div>
+                    </div>
+
+                    <div class="accordion" id="color">
+                        Color
+                        <span style="float: right;">
+                            <i class='fas fa-angle-down'></i>
+                        </span>
+                    </div>
+                    <div class="panel" id="panel2">
+                        <div class="list-collection-item" >
+                            <input type="checkbox" id="white" checked onchange = "filterItemByColor(this)">
+                            <label>White</label>
+                        </div>
+                        <div class="list-collection-item">
+                            <input type="checkbox" id="red" checked onchange = "filterItemByColor(this)">
+                            <label>Red</label>
+                        </div>
+                        <div class="list-collection-item">
+                            <input type="checkbox" id="blue" checked onchange = "filterItemByColor(this)">
+                            <label>Blue</label>
+                        </div>
+                        <div class="list-collection-item">
+                            <input type="checkbox" id="black" checked onchange = "filterItemByColor(this)">
+                            <label>Black</label>
+                        </div>
+                    </div>
+                    <div style="padding: 15px;">
+                        <div class="" id="price">
+                            Price
+                            
+                        </div>
+                        <div class="" id="panel3">
+                            <div class="list-collection-item">
+                                <input type="range" min="1300" max="10000"  class="slider">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div id="result" style="width: 100%; display: inline-flex; flex-wrap: wrap;">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
